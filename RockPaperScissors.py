@@ -1,8 +1,8 @@
 import random
 
 def play():
-    user = input("Seciminiz nedir ? 'r' tas icin, 'p' kagıt icin,'s' makas icin\n")
-    computer = random.choice(["r","p","s"])
+    user = input("Seciminiz nedir ? 't' tas icin, 'k' kagıt icin,'m' makas icin\n")
+    computer = random.choice(["t","k","m"])
 
     if user == computer:
         return "Berabere!"
@@ -13,7 +13,7 @@ def play():
         return "Kaybettiniz!"
 
 def is_win(player,opponent):
-    if (player == "r" and opponent == "s") or (player == "s" and opponent == "p") or (player == "p" and opponent == "r"):
+    if (player == "t" and opponent == "m") or (player == "m" and opponent == "k") or (player == "k" and opponent == "t"):
         return True
 print(play())
 
